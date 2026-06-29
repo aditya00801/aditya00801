@@ -174,9 +174,7 @@ Contribution:
 
 🌐 Open Source
 
-📚 Advanced DSA
-
-⚙️ System Design
+📚  DSA
 ```
 
 ---
@@ -189,11 +187,11 @@ Contribution:
 <img src="https://skillicons.dev/icons?i=github"/>
 </a>
 
-<a href="https://linkedin.com/in/YOUR_LINKEDIN">
+<a href="https://www.linkedin.com/in/aditya-kushwaha-08112k05/">
 <img src="https://skillicons.dev/icons?i=linkedin"/>
 </a>
 
-<a href="mailto:YOUR_EMAIL@gmail.com">
+<a href="mailto:adityakushwaha0007@gmail.com">
 <img src="https://skillicons.dev/icons?i=gmail"/>
 </a>
 
