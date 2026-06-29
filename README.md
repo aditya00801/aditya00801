@@ -1,144 +1,220 @@
 <div align="center">
 
-# <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="35"> Hey, I'm Aditya Kushwaha
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F2027,50:203A43,100:2C5364&height=220&section=header&text=Aditya%20Kushwaha&fontSize=45&fontColor=00F7FF&animation=fadeIn"/>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=1000&color=00F7FF&center=true&vCenter=true&width=700&lines=B.Tech+CSE+(AI);Machine+Learning+Developer;Deep+Learning+Enthusiast;Open+Source+Contributor;DSA+Learner" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3500&pause=1000&color=00F7FF&center=true&vCenter=true&width=900&lines=AI+%26+Machine+Learning+Developer;Open+Source+Contributor;Deep+Learning+Enthusiast;Python+Developer;Computer+Vision;Always+Learning+🚀"/>
+
+<p>
+<img src="https://komarev.com/ghpvc/?username=aditya00801&label=Profile%20Views&color=0e75b6&style=for-the-badge"/>
+<img src="https://img.shields.io/github/followers/aditya00801?style=for-the-badge&logo=github"/>
+<img src="https://img.shields.io/github/stars/aditya00801?style=for-the-badge&logo=github"/>
+</p>
 
 </div>
 
 ---
 
-## ⚡ About Me
+# 👨‍💻 About Me
 
 ```yaml
 Name: Aditya Kushwaha
-Education: B.Tech CSE (AI)
-Graduation: 2027
-Location: India
 
-Interests:
-  - Artificial Intelligence
+Education:
+  B.Tech CSE (Artificial Intelligence)
+
+Location:
+  India 🇮🇳
+
+Currently Working On:
+  - Machine Learning
   - Deep Learning
   - Open Source
-  - Data Structures & Algorithms
   - Computer Vision
 
 Currently Learning:
-  - System Design
   - Advanced DSA
-  - Machine Learning
+  - System Design
+  - Generative AI
+
+Ask Me About:
+  - Python
+  - TensorFlow
+  - OpenCV
+  - Git & GitHub
 ```
 
 ---
 
-# 💻 Tech Stack
+# ⚡ Tech Stack
 
-<p align="center">
+<div align="center">
 
-<img src="https://skillicons.dev/icons?i=python,cpp,c,mysql,tensorflow,pytorch,opencv,git,github,vscode,linux,django,flask" />
+<img src="https://skillicons.dev/icons?i=python,cpp,c,tensorflow,pytorch,opencv,mysql,git,github,linux,vscode,flask,django"/>
 
-</p>
-
----
-
-# 🚀 Featured Projects
-
-### 🌊 Coral Reef Health Monitoring
-Deep Learning application that detects coral bleaching using CNN.
-
-- TensorFlow
-- OpenCV
-- Streamlit
-- MobileNetV2
-- EfficientNet
+</div>
 
 ---
 
-### 🌟 Open Source
+# 📊 GitHub Statistics
 
-✅ Merged Pull Request
+<div align="center">
 
-Repository:
-wifi-observer
+<img height="170" src="https://github-readme-stats.vercel.app/api?username=aditya00801&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true"/>
 
-Contribution:
-Added unit tests and improved project quality.
+<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=aditya00801&layout=compact&theme=tokyonight&hide_border=true"/>
 
----
-
-### 💡 DSA Journey
-
-- LeetCode
-- Arrays
-- Binary Search
-- Graphs
-- Trees
-- Dynamic Programming
-
----
-
-# 📊 GitHub Analytics
-
-<p align="center">
-
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=tokyonight&hide_border=true"/>
-
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_USERNAME&layout=compact&theme=tokyonight&hide_border=true"/>
-
-</p>
+</div>
 
 ---
 
 # 🔥 Contribution Streak
 
-<p align="center">
+<div align="center">
 
-<img src="https://streak-stats.demolab.com?user=YOUR_USERNAME&theme=tokyonight&hide_border=true"/>
+<img src="https://streak-stats.demolab.com?user=aditya00801&theme=tokyonight&hide_border=true"/>
 
-</p>
+</div>
 
 ---
 
 # 📈 Contribution Graph
 
-<p align="center">
+<div align="center">
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=YOUR_USERNAME&theme=tokyo-night&hide_border=true"/>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=aditya00801&theme=tokyo-night&hide_border=true"/>
 
-</p>
+</div>
 
 ---
 
 # 🏆 GitHub Trophies
 
-<p align="center">
+<div align="center">
 
-<img src="https://github-profile-trophy.vercel.app/?username=YOUR_USERNAME&theme=tokyonight&no-frame=true&row=1&column=6"/>
+<img src="https://github-profile-trophy.vercel.app/?username=aditya00801&theme=tokyonight&no-frame=true&row=1&column=6"/>
 
-</p>
+</div>
 
 ---
 
-# 🌐 Connect
+# 📊 Profile Summary
 
-<p align="center">
+<div align="center">
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=aditya00801&theme=tokyonight"/>
+
+</div>
+
+<div align="center">
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=aditya00801&theme=tokyonight"/>
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=aditya00801&theme=tokyonight"/>
+
+</div>
+
+<div align="center">
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=aditya00801&theme=tokyonight"/>
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=aditya00801&theme=tokyonight&utcOffset=5.5"/>
+
+</div>
+
+---
+
+# 🚀 Featured Projects
+
+## 🌊 Coral Reef Health Monitoring
+
+AI-powered coral bleaching detection using CNN.
+
+**Tech Stack**
+
+`TensorFlow`
+`OpenCV`
+`Python`
+`Streamlit`
+
+---
+
+## ⭐ Open Source
+
+Merged Pull Request ✅
+
+Repository:
+
+**wifi-observer**
+
+Contribution:
+
+- Added Unit Tests
+- Improved Testing
+- GitHub Workflow
+
+---
+
+## 🧩 DSA
+
+- LeetCode
+- Python
+- Competitive Programming
+- Problem Solving
+
+---
+
+# 🌱 Currently Learning
+
+```text
+🧠 Deep Learning
+
+🤖 Artificial Intelligence
+
+📷 Computer Vision
+
+🌐 Open Source
+
+📚 Advanced DSA
+
+⚙️ System Design
+```
+
+---
+
+# 🌐 Connect With Me
+
+<div align="center">
+
+<a href="https://github.com/aditya00801">
+<img src="https://skillicons.dev/icons?i=github"/>
+</a>
 
 <a href="https://linkedin.com/in/YOUR_LINKEDIN">
 <img src="https://skillicons.dev/icons?i=linkedin"/>
 </a>
 
-<a href="mailto:YOUR_EMAIL">
+<a href="mailto:YOUR_EMAIL@gmail.com">
 <img src="https://skillicons.dev/icons?i=gmail"/>
 </a>
 
-</p>
+</div>
+
+---
+
+# 💡 Quote
+
+> *"Stay curious. Build consistently. Contribute openly."*
 
 ---
 
 <div align="center">
 
-### 🚀 "Code. Learn. Build. Contribute."
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00F5FF,100:6C63FF&height=120&section=footer"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2C5364,100:0F2027&height=120&section=footer"/>
 
 </div>
+
+## 🐍 Contribution Snake
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/aditya00801/aditya00801/output/github-contribution-grid-snake-dark.svg" />
+</p>
