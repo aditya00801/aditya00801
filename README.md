@@ -47,36 +47,6 @@ Student at BBD University with a focus on Machine Learning, Cybersecurity, and D
 
 ---
 
-## Projects
-
-| Project | Description | Stack |
-|---|---|---|
-| [Project Alpha](https://github.com/aditya00801/your-repo) | One-line description of what it does | Python, ML |
-| [Project Beta](https://github.com/aditya00801/your-repo) | One-line description of what it does | Pandas, MySQL |
-| [Project Gamma](https://github.com/aditya00801/your-repo) | One-line description of what it does | Python, Security |
-
-> Replace placeholders with your actual repositories.
-
----
-
-## Competitive Programming
-
-**LeetCode — AdityaKushwaha08**
-
-<div align="center">
-<img src="https://leetcard.jacoblin.cool/AdityaKushwaha08?theme=light&font=Nunito&ext=heatmap&border=0&radius=6&animation=false" width="60%" />
-</div>
-
-| Level | Topics |
-|---|---|
-| Advanced | Divide & Conquer · Dynamic Programming · Segment Tree |
-| Intermediate | Database · Hash Table · Binary Search |
-| Fundamental | Array · String · Two Pointers |
-
-Languages: `Python3` — 12 solved &nbsp;·&nbsp; `MySQL` — 11 solved &nbsp;·&nbsp; `Python` — 2 solved
-
----
-
 ## GitHub Stats
 
 <div align="center">
