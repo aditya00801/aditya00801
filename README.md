@@ -18,6 +18,12 @@
 <br/>
 
 [![GitHub](https://img.shields.io/badge/GitHub-aditya00801-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aditya00801)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Aditya_Kushwaha-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aditya-kushwaha-08112k05/)
+[![LeetCode](https://img.shields.io/badge/LeetCode-AdityaKushwaha08-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/AdityaKushwaha08/)
+[![HackerRank](https://img.shields.io/badge/HackerRank-adityakushwaha02-00EA64?style=for-the-badge&logo=hackerrank&logoColor=black)](https://www.hackerrank.com/profile/adityakushwaha02)
+
+<br/>
+
 ![Profile Views](https://komarev.com/ghpvc/?username=aditya00801&style=for-the-badge&color=00d9ff&label=VISITORS)
 [![Followers](https://img.shields.io/github/followers/aditya00801?style=for-the-badge&color=00D9FF&labelColor=181717&label=FOLLOWERS)](https://github.com/aditya00801?tab=followers)
 
@@ -31,11 +37,12 @@
 
 ```python
 class Aditya:
-    name     = "Aditya Kushwaha"
-    role     = "Student & Aspiring ML/Security Engineer"
-    focus    = ["AI / ML", "Cybersecurity", "Data Science"]
-    language = ["Python 🐍"]
-    mantra   = "Code. Analyse. Secure. Repeat."
+    name       = "Aditya Kushwaha"
+    university = "BBD University, India"
+    role       = "Student & Aspiring ML/Security Engineer"
+    focus      = ["AI / ML", "Cybersecurity", "Data Science"]
+    language   = ["Python3 🐍", "MySQL 🗄️"]
+    mantra     = "Code. Analyse. Secure. Repeat."
 
     def current_mission(self):
         return [
@@ -44,6 +51,13 @@ class Aditya:
             "📊 Building data pipelines & visualisations",
             "🤝 Open to collabs on AI + security projects",
         ]
+
+    def skills_on_leetcode(self):
+        return {
+            "Advanced":     ["Divide & Conquer", "Dynamic Programming", "Segment Tree"],
+            "Intermediate": ["Database", "Hash Table", "Binary Search"],
+            "Fundamental":  ["Array", "String", "Two Pointers"],
+        }
 ```
 
 ---
@@ -52,8 +66,9 @@ class Aditya:
 
 <div align="center">
 
-### 🐍 Core Language
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=FFD343)
+### 🐍 Core Languages
+![Python](https://img.shields.io/badge/Python3-3776AB?style=for-the-badge&logo=python&logoColor=FFD343)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
 
 ### 🤖 AI / ML Stack
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
@@ -86,6 +101,34 @@ class Aditya:
 
 ---
 
+## 🏅 Competitive Programming
+
+<div align="center">
+
+### 🟡 LeetCode — AdityaKushwaha08
+
+<img src="https://leetcard.jacoblin.cool/AdityaKushwaha08?theme=dark&font=Fira%20Code&ext=heatmap" alt="LeetCode Stats" width="70%" />
+
+<br/>
+
+| 🏷️ Skill Level | 🧩 Topics Mastered |
+|:---:|:---|
+| 🔴 **Advanced** | Divide & Conquer · Dynamic Programming · Segment Tree |
+| 🟡 **Intermediate** | Database · Hash Table · Binary Search |
+| 🟢 **Fundamental** | Array · String · Two Pointers |
+
+[![LeetCode Profile](https://img.shields.io/badge/View_Full_Profile-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/AdityaKushwaha08/)
+
+<br/>
+
+### 🟢 HackerRank — adityakushwaha02
+
+[![HackerRank](https://img.shields.io/badge/Visit_HackerRank_Profile-00EA64?style=for-the-badge&logo=hackerrank&logoColor=black)](https://www.hackerrank.com/profile/adityakushwaha02)
+
+</div>
+
+---
+
 ## 🚀 Featured Projects
 
 > 💡 *Replace these with your real repos — your work deserves the spotlight!*
@@ -107,7 +150,7 @@ class Aditya:
 <div align="center">
 
 ### 🔢 Core Stats
-<img src="https://github-readme-stats.vercel.app/api?username=aditya00801&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true&rank_icon=github&show=reviews,discussions_started,discussions_answered,prs_merged,prs_merged_percentage" width="56%" />
+<img src="https://github-readme-stats.vercel.app/api?username=aditya00801&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true&rank_icon=github" width="56%" />
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=aditya00801&layout=donut&theme=tokyonight&hide_border=true&langs_count=8" width="36%" />
 
 </div>
@@ -141,7 +184,7 @@ class Aditya:
 
 ---
 
-## 🏆 Achievements
+## 🏆 GitHub Achievements
 
 <div align="center">
   <img src="https://github-profile-trophy.vercel.app/?username=aditya00801&theme=tokyonight&no-frame=true&column=7&margin-w=8" width="95%" />
@@ -181,9 +224,10 @@ class Aditya:
 
 ### 🌐 Let's Connect & Build Together
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/your-linkedin)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aditya-kushwaha-08112k05/)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/aditya00801)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:your@email.com)
+[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/AdityaKushwaha08/)
+[![HackerRank](https://img.shields.io/badge/HackerRank-00EA64?style=for-the-badge&logo=hackerrank&logoColor=black)](https://www.hackerrank.com/profile/adityakushwaha02)
 
 <br/>
 
