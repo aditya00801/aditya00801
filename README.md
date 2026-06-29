@@ -38,7 +38,7 @@
 
 ---
 
-<img align="right" width="280" src="https://raw.githubusercontent.com/abhisheknaiidu/abhisheknaiidu/master/code.gif" />
+<img align="right" width="280" src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif" />
 
 ## `whoami`
 
@@ -116,7 +116,7 @@ class Aditya:
 
 ### 🟡 LeetCode — [AdityaKushwaha08](https://leetcode.com/u/AdityaKushwaha08/)
 
-<img src="https://leetcard.jacoblin.cool/AdityaKushwaha08?theme=dark&font=Fira%20Code&ext=heatmap&border=0&radius=10" width="72%" alt="LeetCode Stats Card"/>
+<img src="https://leetcard.jacoblin.cool/AdityaKushwaha08?theme=dark&font=Fira%20Code&ext=heatmap&border=0&radius=10&animation=false" width="72%" alt="LeetCode Stats Card"/>
 
 <br/>
 
@@ -171,7 +171,7 @@ class Aditya:
 
 ### 🔥 Streak
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=aditya00801&theme=tokyonight&hide_border=true&background=1a1b27&ring=00D9FF&fire=FF6B6B&currStreakLabel=00D9FF&sideLabels=a9b1d6&dates=a9b1d6&currStreakNum=ffffff" width="62%" />
+<img src="https://streak-stats.demolab.com/?user=aditya00801&theme=tokyonight&hide_border=true&background=1a1b27&ring=00D9FF&fire=FF6B6B&currStreakLabel=00D9FF&sideLabels=a9b1d6&dates=a9b1d6&currStreakNum=ffffff" width="62%" />
 
 </div>
 
