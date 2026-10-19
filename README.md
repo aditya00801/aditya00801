@@ -43,7 +43,7 @@ Student at BBD University with a focus on Machine Learning, Cybersecurity, and D
 `Kali Linux` `Wireshark` `Nmap` `Metasploit`
 
 **Tools**
-`Git` `GitHub` `VS Code` `Google Colab` `Linux`
+`Git` `GitHub` `VS Code` `Google Colab` `Linux` 'Anti Gravity'
 
 ---
 
