@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the teal SVG cards used by README.md (standard library only).
+"""Build the retro SVG cards used by README.md (standard library only).
 
   python3 scripts/build_cards.py           # rebuild from data/contributions.json
   python3 scripts/build_cards.py --fetch   # refresh the data first (needs GITHUB_TOKEN)
@@ -20,139 +20,163 @@ ROOT = Path(__file__).resolve().parent.parent
 ASSETS = ROOT / "assets"
 DATA = ROOT / "data" / "contributions.json"
 
-BG0, BG1, EDGE = "#061a1f", "#0b2a30", "#145c5a"
-TEAL, MINT, TEXT, MUTED = "#2dd4bf", "#99f6e4", "#e6fffb", "#8fbdb8"
-SANS = "'Segoe UI',Ubuntu,Helvetica,Arial,sans-serif"
-MONO = "'JetBrains Mono','Fira Code',Consolas,Menlo,monospace"
+# Colour themes. "fieldnotes" matches https://aditya00801.github.io/
+THEMES = {
+    "fieldnotes": dict(paper="#E8E9DF", deep="#DFE2D5", ink="#2E3D28", soft="#46523F", accent="#536448",
+                       second="#A9B887", hi="#2E3D28", rule="#B7BEA9", tiers=("#A9B887", "#718064", "#2E3D28")),
+    "sunset": dict(paper="#F6EFD9", deep="#EDE0BF", ink="#3B2A20", soft="#5A4436", accent="#1F6F78",
+                   second="#E3A72F", hi="#D1602C", rule="#D3BF92", tiers=("#1F6F78", "#E3A72F", "#D1602C")),
+    "blend": dict(paper="#E8E9DF", deep="#DFE2D5", ink="#2E3D28", soft="#46523F", accent="#536448",
+                  second="#E3A72F", hi="#D1602C", rule="#B7BEA9", tiers=("#536448", "#E3A72F", "#D1602C")),
+}
+THEME = os.environ.get("THEME", "fieldnotes")
+C = THEMES[THEME]
+PAPER, DEEP, INK, SOFT, ACCENT, SECOND, HI, RULE = (
+    C[k] for k in ("paper", "deep", "ink", "soft", "accent", "second", "hi", "rule"))
+SANS = "Arial,Helvetica,sans-serif"
+MONO = "'Courier New',Courier,monospace"
+SERIF = "Georgia,'Times New Roman',serif"
 
 # ---------------------------------------------------------------- CONTENT
-ABOUT = [
-    "I build practical AI solutions with machine learning, deep learning and",
-    "computer vision, and explore where AI meets cybersecurity.",
-]
-FOCUS = ["Deep Learning & Computer Vision", "MLOps & Generative AI",
-         "Ethical hacking & intrusion detection", "DSA, System Design & Backend"]
-FACTS = [("Degree", "B.Tech CSE (Artificial Intelligence)"),
-         ("University", "Babu Banarasi Das University"),
-         ("Location", "Lucknow, India"),
-         ("Language", "Python")]
-STACK = [
-    ("Languages", ["Python", "C", "C++", "MySQL"]),
-    ("AI / ML", ["TensorFlow", "Keras", "PyTorch", "Scikit-Learn", "OpenCV"]),
-    ("Data Science", ["NumPy", "Pandas", "Matplotlib", "Seaborn", "Jupyter"]),
-    ("Frameworks", ["Flask", "Streamlit"]),
-    ("Security", ["Kali Linux", "Wireshark", "Nmap", "Metasploit"]),
-    ("Tools", ["Git", "GitHub", "VS Code", "Google Colab", "Linux", "Antigravity"]),
+LEAD = ["I’m a final-year Computer Science & Engineering student specializing in",
+        "Artificial Intelligence at Babu Banarasi Das University, Lucknow."]
+ABOUT = ["I like taking ideas from notebooks to working software, whether that means preparing",
+         "a dataset, testing a model, or making a tool someone can actually use. I’m looking for",
+         "an internship or an early-career team where I can learn by building."]
+TOOLKIT = [
+    ("Code", ["Python · C++ · C · SQL"]),
+    ("Machine learning", ["Scikit-learn · TensorFlow · CatBoost", "Optuna · feature engineering"]),
+    ("Agentic AI", ["LLMs · AI agents · multi-agent systems", "Pydantic · automation"]),
+    ("Data", ["Pandas · NumPy · EDA", "visualization · statistical analysis"]),
+    ("Backend & security", ["REST APIs · FastAPI · HTTP", "threat detection · security logging"]),
+    ("Development", ["Git · GitHub · Linux · WSL", "Jupyter · Streamlit"]),
 ]
 PROJECTS = [
-    ("cyber-shield", "CyberShield-Auto", "In development",
-     "AI-powered cyber threat detection. Preparing the CICIDS2017 dataset for a multiclass intrusion detection model.",
-     "Python · CICIDS2017 · Jupyter"),
-    ("brain-tumor", "Brain Tumor Detection", "Deep learning",
+    ("student-stress", "Student Lifestyle & Stress Prediction", "DEPLOYED",
+     "End-to-end app predicting health conditions in three categories. CatBoost on 690,088 records with 20 engineered features: 94.985% balanced accuracy.",
+     "CatBoost · Optuna · Streamlit"),
+    ("cyber-shield", "CyberShield-Auto", "IN DEVELOPMENT",
+     "AI-driven cybersecurity platform combining machine learning, multi-agent workflows and security event analysis to spot and rate suspicious activity.",
+     "AI Agents · FastAPI · Pydantic"),
+    ("brain-tumor", "Brain Tumor Detection", "DEEP LEARNING",
      "CNN that classifies brain MRI scans as glioma, meningioma, pituitary or no tumor, served with Streamlit.",
      "TensorFlow · Keras · Streamlit"),
-    ("coral-reef", "Coral Reef Health Monitoring", "Team project",
+    ("coral-reef", "Coral Reef Health Monitoring", "TEAM PROJECT",
      "Transfer-learning CNN that tells bleached from healthy coral, with a Streamlit app. 92% reported accuracy.",
      "TensorFlow · OpenCV · Streamlit"),
-    ("student-stress", "Student Lifestyle & Stress", "Kaggle S6E7",
-     "End-to-end ML for a Playground Series competition: feature engineering and balanced accuracy tuning.",
-     "Random Forest · CatBoost"),
 ]
-CERTS = [
-    ("Agentic AI Certified Foundations Associate", "Oracle", "Aug 2026"),
-    ("MongoDB Overview: Core Concepts and Architecture", "MongoDB", "Aug 2026"),
-    ("Data Analytics Job Simulation", "Deloitte · Forage", "Apr 2026"),
-    ("SQL Bootcamp", "LetsUpgrade", "Mar 2026"),
-    ("Git & GitHub Bootcamp", "LetsUpgrade", "Feb 2026"),
-    ("Software Engineering Job Simulation", "JPMorgan Chase · Forage", "Nov 2025"),
-    ("OCI 2025 Certified Data Science Professional", "Oracle", "Oct 2025"),
-    ("Intro to Machine Learning", "Kaggle", "Sep 2025"),
+LOGBOOK = [
+    ("27 AUG 2026", "Oracle Agentic AI Certified Foundations Associate", "Oracle University"),
+    ("26 AUG 2026", "MongoDB Overview: Core Concepts and Architecture", "MongoDB"),
+    ("14 APR 2026", "Deloitte Data Analytics Job Simulation", "Forage"),
+    ("09–11 MAR 2026", "SQL Bootcamp", "LetsUpgrade"),
+    ("09–10 FEB 2026", "Git & GitHub Bootcamp", "LetsUpgrade"),
+    ("28 NOV 2025", "JPMorgan Chase Software Engineering Job Simulation", "Forage · Kafka, H2, REST APIs"),
+    ("17 OCT 2025", "Oracle Cloud Infrastructure 2025 Certified Data Science Professional", "Oracle · valid through October 2027"),
+    ("13 SEP 2025", "Intro to Machine Learning", "Kaggle"),
+    ("MAY 2025", "HackHazards ’25 participant", "Team Hack Heroes · The NAMESPACE Community"),
 ]
 
 
 # ---------------------------------------------------------------- HELPERS
-def text(x, y, value, size=14, fill=TEXT, weight=400, font=SANS, anchor="start", extra=""):
+def text(x, y, value, size=14, fill=INK, weight=400, font=SANS, anchor="start", extra=""):
     return (f'<text x="{x}" y="{y}" font-family="{font}" font-size="{size}" fill="{fill}" '
             f'font-weight="{weight}" text-anchor="{anchor}" {extra}>{escape(str(value))}</text>')
 
 
-def card(name, width, height, body, label, title=None, style=""):
+def shade(colour, factor):
+    return "#" + "".join(f"{int(int(colour[i:i+2], 16) * factor):02x}" for i in (1, 3, 5))
+
+
+def box(x, y, w, h, fill=PAPER, stroke=INK):
+    return f'<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{fill}" stroke="{stroke}"/>'
+
+
+def eyebrow(x, y, value):
+    return text(x, y, value, 12, ACCENT, 700, MONO, extra='letter-spacing="1.2"')
+
+
+def card(name, width, height, body, label, kicker=None, title=None, style=""):
     head = ""
-    if title:
-        head = (f'<rect x="28" y="24" width="4" height="20" rx="2" fill="{TEAL}"/>'
-                + text(42, 41, title, 19, TEXT, 700))
+    if kicker:
+        head = eyebrow(28, 36, kicker) + text(28, 68, title, 27, INK, 500, extra='letter-spacing="-0.8"')
     svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '
            f'viewBox="0 0 {width} {height}" role="img" aria-label="{escape(label, {chr(34): "&quot;"})}">'
-           f'<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">'
-           f'<stop offset="0" stop-color="{BG0}"/><stop offset="1" stop-color="{BG1}"/></linearGradient></defs>'
-           f'<style>{style}</style>'
-           f'<rect x="1" y="1" width="{width-2}" height="{height-2}" rx="16" fill="url(#bg)" stroke="{EDGE}" stroke-width="1.5"/>'
+           f'<defs><pattern id="dots" width="7" height="7" patternUnits="userSpaceOnUse">'
+           f'<circle cx="1" cy="1" r=".6" fill="{INK}" opacity=".13"/></pattern></defs>'
+           f'<style>{style}@media (prefers-reduced-motion:reduce){{*{{animation:none!important}}}}</style>'
+           f'<rect x="7" y="7" width="{width-8}" height="{height-8}" fill="{INK}"/>'
+           f'{box(1, 1, width-8, height-8)}'
+           f'<rect x="1" y="1" width="{width-8}" height="{height-8}" fill="url(#dots)"/>'
            f'{head}{body}</svg>\n')
     (ASSETS / f"{name}.svg").write_text(svg, encoding="utf-8")
 
 
 # ---------------------------------------------------------------- CARDS
 def hero():
-    b = [f'<circle cx="760" cy="40" r="120" fill="{TEAL}" opacity="0.07"/>',
-         f'<circle cx="70" cy="220" r="100" fill="{TEAL}" opacity="0.06"/>',
-         text(420, 62, "$ whoami", 15, TEAL, 400, MONO, "middle"),
-         text(420, 120, "Aditya Kushwaha", 52, TEXT, 800, SANS, "middle"),
-         text(420, 158, "AI / ML  ·  Cybersecurity  ·  Data Science", 20, MINT, 600, SANS, "middle"),
-         text(420, 196, "Code • Learn • Build • Contribute • Repeat", 15, MUTED, 400, MONO, "middle"),
-         f'<rect class="line" x="360" y="212" width="120" height="3" rx="1.5" fill="{TEAL}"/>']
-    style = ("@keyframes p{0%,100%{opacity:.35}50%{opacity:1}}.line{animation:p 3s ease-in-out infinite}")
-    card("hero", 840, 240, "".join(b), "Aditya Kushwaha: AI/ML, Cybersecurity, Data Science", style=style)
+    b = [f'<circle class="light" cx="32" cy="29" r="4" fill="{ACCENT}"/>',
+         text(44, 33, "PERSONAL PROFILE / 2026", 11, ACCENT, 400, MONO),
+         text(806, 33, "LUCKNOW, INDIA ✳", 11, ACCENT, 400, MONO, "end"),
+         f'<line x1="28" y1="48" x2="806" y2="48" stroke="{RULE}"/>',
+         eyebrow(28, 84, "ADITYA KUSHWAHA — COMPUTER SCIENCE / AI"),
+         text(28, 138, "Building useful things with", 42, INK, 500, extra='letter-spacing="-1.8"'),
+         text(28, 188, "intelligent software.", 44, HI, 400, SERIF, extra='font-style="italic" letter-spacing="-1.8"'),
+         text(28, 224, "Machine learning, agentic AI, and the software that brings them into the real world.", 14, SOFT),
+         f'<rect x="28" y="250" width="8" height="8" fill="{HI}"/>',
+         text(44, 258, "OPEN TO INTERNSHIPS & EARLY-CAREER ROLES", 12, ACCENT, 700, MONO),
+         f'<ellipse class="orbit" cx="704" cy="134" rx="104" ry="52" fill="none" stroke="{ACCENT}" stroke-dasharray="5 6"/>',
+         f'<g class="float"><rect x="672" y="102" width="82" height="82" fill="{INK}"/>'
+         f'{box(664, 94, 82, 82, SECOND)}'
+         + text(705, 139, "AK.", 28, INK, 900, MONO, "middle")
+         + text(705, 160, "AI / SWE", 10, INK, 700, MONO, "middle") + "</g>"]
+    style = ("@keyframes f{50%{transform:translateY(-7px)}}.float{animation:f 7s ease-in-out infinite}"
+             "@keyframes o{to{stroke-dashoffset:-220}}.orbit{animation:o 18s linear infinite}"
+             "@keyframes l{50%{opacity:.3}}.light{animation:l 2.4s ease-in-out infinite}")
+    card("hero", 840, 288, "".join(b),
+         "Aditya Kushwaha: building useful things with intelligent software. Open to internships and early-career roles.",
+         style=style)
 
 
 def about():
-    b = [text(28, 76 + i * 22, line, 15, MUTED) for i, line in enumerate(ABOUT)]
-    b.append(text(28, 142, "CURRENT FOCUS", 12, TEAL, 700))
-    for i, item in enumerate(FOCUS):
-        y = 170 + i * 27
-        b.append(f'<circle cx="34" cy="{y-5}" r="3.5" fill="{TEAL}"/>' + text(48, y, item, 15))
-    b.append(f'<rect x="458" y="130" width="354" height="148" rx="12" fill="#04151a" stroke="{EDGE}"/>')
-    for i, (key, value) in enumerate(FACTS):
-        y = 158 + i * 31
-        b.append(text(476, y, key, 12, TEAL, 400, MONO) + text(576, y, value, 13, TEXT))
-    card("about", 840, 304, "".join(b), "About: " + " ".join(ABOUT), "About Me")
+    b = [text(28, 110 + i * 25, line, 17, INK) for i, line in enumerate(LEAD)]
+    b += [text(28, 174 + i * 22, line, 14, SOFT) for i, line in enumerate(ABOUT)]
+    card("about", 840, 250, "".join(b), " ".join(LEAD + ABOUT), "01 / A SHORT INTRODUCTION",
+         "Curiosity, with something to show for it.")
 
 
-def stack():
-    b, y = [], 66
-    for group, items in STACK:
-        b.append(text(28, y + 19, group, 13, TEAL, 700))
-        x = 170
-        for item in items:
-            w = int(len(item) * 7.8) + 26
-            b.append(f'<rect x="{x}" y="{y}" width="{w}" height="28" rx="14" fill="#0e3a3c" stroke="{EDGE}"/>'
-                     + text(x + w / 2, y + 19, item, 13, TEXT, 500, SANS, "middle"))
-            x += w + 10
-        y += 42
-    label = "Tech stack: " + "; ".join(f"{g}: {', '.join(i)}" for g, i in STACK)
-    card("stack", 840, y + 14, "".join(b), label, "Tech Stack")
+def toolkit():
+    b = []
+    for i, (name, lines) in enumerate(TOOLKIT):
+        x, y = 28 + (i % 2) * 389, 92 + (i // 2) * 92
+        b.append(box(x, y, 389, 92, "none", RULE) + text(x + 16, y + 28, "ABCDEF"[i], 12, ACCENT, 400, MONO)
+                 + text(x + 44, y + 28, name, 15, INK, 700, MONO))
+        b += [text(x + 44, y + 52 + n * 20, line, 13, SOFT) for n, line in enumerate(lines)]
+    label = "Toolkit: " + "; ".join(f"{n}: {' '.join(l)}" for n, l in TOOLKIT)
+    card("stack", 840, 396, "".join(b), label, "02 / TOOLS I REACH FOR", "The toolkit")
 
 
 def projects():
-    for slug, title, tag, desc, tech in PROJECTS:
-        tw = int(len(tag) * 6.8) + 22
-        b = [f'<rect x="22" y="20" width="{tw}" height="22" rx="11" fill="#0e3a3c" stroke="{TEAL}"/>',
-             text(22 + tw / 2, 35, tag, 11, MINT, 600, SANS, "middle"),
-             text(22, 72, title, 19, TEXT, 700)]
-        b += [text(22, 100 + i * 20, line, 13, MUTED) for i, line in enumerate(textwrap.wrap(desc, 56)[:4])]
-        b.append(text(22, 188, tech, 12, TEAL, 400, MONO))
-        card(f"project-{slug}", 410, 208, "".join(b), f"{title}: {desc}")
+    for number, (slug, title, status, desc, tech) in enumerate(PROJECTS, 1):
+        b = [text(20, 30, f"PROJECT / 0{number}", 11, ACCENT, 400, MONO),
+             text(382, 30, status, 11, ACCENT, 700, MONO, "end"),
+             text(20, 68, title, 17.5, INK, 700, extra='letter-spacing="-0.5"')]
+        b += [text(20, 96 + i * 20, line, 13, SOFT) for i, line in enumerate(textwrap.wrap(desc, 55)[:4])]
+        b.append(f'<line x1="20" y1="174" x2="382" y2="174" stroke="{RULE}"/>')
+        b.append(text(20, 196, tech, 12, ACCENT, 700, MONO))
+        card(f"project-{slug}", 410, 220, "".join(b), f"{title}: {desc}")
 
 
-def certifications():
+def logbook():
     b = []
-    for i, (name, issuer, date) in enumerate(CERTS):
-        y = 78 + i * 34
-        b.append(f'<path d="M34 {y-11}l6 6-6 6-6-6z" fill="{TEAL}"/>'
-                 + text(52, y, name, 14, TEXT, 600)
-                 + text(620, y, issuer, 12, MUTED, 400, SANS, "end")
-                 + text(812, y, date, 12, TEAL, 400, MONO, "end"))
-    label = "Certifications: " + "; ".join(f"{n} ({i}, {d})" for n, i, d in CERTS)
-    card("certifications", 840, 78 + len(CERTS) * 34, "".join(b), label, "Certificates & Courses")
+    for i, (date, name, issuer) in enumerate(LOGBOOK):
+        y = 92 + i * 48
+        b.append(f'<line x1="28" y1="{y}" x2="806" y2="{y}" stroke="{RULE}"/>'
+                 + text(28, y + 22, date, 11, ACCENT, 400, MONO)
+                 + text(158, y + 22, name, 14, INK, 700)
+                 + text(158, y + 39, issuer, 12, SOFT)
+                 + text(806, y + 22, f"{len(LOGBOOK) - i:02d}", 11, ACCENT, 400, MONO, "end"))
+    label = "Logbook: " + "; ".join(f"{n} ({d})" for d, n, _ in LOGBOOK)
+    card("logbook", 840, 92 + len(LOGBOOK) * 48 + 22, "".join(b), label, "04 / RECENT MILESTONES", "The logbook")
 
 
 def stats(days):
@@ -173,12 +197,12 @@ def stats(days):
              (max(counts, default=0), "best day")]
     b = []
     for i, (value, name) in enumerate(items):
-        x = 28 + i * 159
-        b.append(f'<rect x="{x}" y="64" width="148" height="86" rx="12" fill="#04151a" stroke="{EDGE}"/>'
-                 + text(x + 74, 108, f"{value:,}", 30, TEAL, 800, SANS, "middle")
-                 + text(x + 74, 133, name, 11, MUTED, 400, SANS, "middle"))
+        x = 28 + i * 157
+        b.append(box(x, 90, 148, 90, DEEP)
+                 + text(x + 74, 136, f"{value:,}", 32, HI, 400, SERIF, "middle")
+                 + text(x + 74, 163, name, 10.5, SOFT, 400, MONO, "middle"))
     label = "GitHub activity, last 12 months: " + ", ".join(f"{v} {n}" for v, n in items)
-    card("stats", 840, 174, "".join(b), label, "GitHub Activity · last 12 months")
+    card("stats", 840, 208, "".join(b), label, "GITHUB / LAST 12 MONTHS", "Activity")
 
 
 def city(days, updated):
@@ -204,15 +228,14 @@ def city(days, updated):
     beacon = ""
     # Draw the ground first so no tile covers a building while it rises.
     for w, d, count in cells:
-        b.append(poly([pt(w, d), pt(w + .86, d), pt(w + .86, d + .86), pt(w, d + .86)], "#10393d"))
+        b.append(poly([pt(w, d), pt(w + .86, d), pt(w + .86, d + .86), pt(w, d + .86)], DEEP if THEME == "sunset" else RULE))
     for w, d, count in sorted(cells, key=lambda c: c[0] * uy + c[1] * vy):
         if not count:
             continue
         level = (count / peak) ** 0.5
         h = 10 + 92 * level
-        top, left, right = (("#5eead4", "#0f766e", "#115e59") if level < .35 else
-                            ("#7ff0dc", "#0d9488", "#0f766e") if level < .65 else
-                            ("#ccfbf1", "#14b8a6", "#0d9488"))
+        top = C["tiers"][0 if level < .35 else 1 if level < .65 else 2]
+        left, right = shade(top, .82), shade(top, .66)
         a, e = .08, .78
         # buildings rise one week after another, from left to right
         b.append(f'<g class="rise" style="animation-delay:{w * .045:.2f}s">')
@@ -222,19 +245,16 @@ def city(days, updated):
         # lit windows
         for k, z in enumerate(range(8, int(h) - 5, 10)):
             b.append(poly([pt(w + .27, d + e, z), pt(w + .52, d + e, z), pt(w + .52, d + e, z + 4),
-                           pt(w + .27, d + e, z + 4)], "#fef9c3", f'class="w{(w + d + k) % 3}"'))
+                           pt(w + .27, d + e, z + 4)], PAPER, f'class="w{(w + d + k) % 3}"'))
         b.append("</g>")
         if (w, d) == newest:
             x, y = pt(w + .43, d + .43, h + 9).split(",")
-            beacon = (f'<g class="beacon"><circle class="ring" cx="{x}" cy="{y}" r="4" fill="none" stroke="#fde68a" '
-                      f'stroke-width="1.5"/><circle cx="{x}" cy="{y}" r="2.5" fill="#fde68a"/></g>')
+            beacon = (f'<g class="beacon"><circle class="ring" cx="{x}" cy="{y}" r="4" fill="none" stroke="{HI}" '
+                      f'stroke-width="1.5"/><circle cx="{x}" cy="{y}" r="2.5" fill="{HI}"/></g>')
     b.append(beacon)  # marks the most recent active day
-    for i, (x, y) in enumerate([(300, 70), (420, 96), (520, 58), (640, 84), (730, 130), (780, 60),
-                                (230, 104), (80, 330), (200, 372), (330, 394)]):
-        b.append(f'<circle class="w{i % 3}" cx="{x}" cy="{y}" r="1.4" fill="{MINT}"/>')
     total = sum(d["count"] for d in days)
-    b.append(text(812, 40, f"{total:,} contributions", 14, MINT, 600, SANS, "end"))
-    b.append(text(812, 462, f"taller = busier · beacon = latest active day · updated {updated}", 11, MUTED, 400, MONO, "end"))
+    b.append(text(806, 36, f"{total:,} CONTRIBUTIONS", 12, ACCENT, 700, MONO, "end"))
+    b.append(text(806, 458, f"taller = busier · beacon = latest active day · updated {updated}", 11, ACCENT, 400, MONO, "end"))
     style = ("@keyframes t{0%,100%{opacity:.95}50%{opacity:.25}}"
              ".w0{animation:t 4s infinite}.w1{animation:t 5s 1.3s infinite}.w2{animation:t 6s 2.1s infinite}"
              "@keyframes rise{from{transform:scaleY(0);opacity:0}to{transform:scaleY(1);opacity:1}}"
@@ -242,9 +262,10 @@ def city(days, updated):
              "@keyframes show{from{opacity:0}}.beacon{animation:show .6s 3.2s backwards}"
              "@keyframes ping{0%{transform:scale(.6);opacity:1}100%{transform:scale(3);opacity:0}}"
              ".ring{transform-box:fill-box;transform-origin:center;animation:ping 1.8s ease-out infinite}"
-             "@media (prefers-reduced-motion:reduce){*{animation:none!important}}")
+             )
     card("city", 840, 480, "".join(b),
-         f"Contribution city: {total} contributions in the last 12 months", "Contribution City", style)
+         f"Contribution city: {total} contributions in the last 12 months", "GITHUB / DAY BY DAY",
+         "Contribution city", style)
 
 
 # ---------------------------------------------------------------- DATA
@@ -272,9 +293,9 @@ def main():
     data = json.loads(DATA.read_text())
     hero()
     about()
-    stack()
+    toolkit()
     projects()
-    certifications()
+    logbook()
     stats(data["days"])
     city(data["days"], data["updated"])
 
