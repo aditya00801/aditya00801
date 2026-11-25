@@ -200,9 +200,13 @@ def city(days, updated):
         return f'<polygon points="{" ".join(points)}" fill="{fill}" {extra}/>'
 
     b = []
+    newest = next(((w, d) for w, d, count in reversed(cells) if count), None)
+    beacon = ""
+    # Draw the ground first so no tile covers a building while it rises.
+    for w, d, count in cells:
+        b.append(poly([pt(w, d), pt(w + .86, d), pt(w + .86, d + .86), pt(w, d + .86)], "#10393d"))
     for w, d, count in sorted(cells, key=lambda c: c[0] * uy + c[1] * vy):
         if not count:
-            b.append(poly([pt(w, d), pt(w + .86, d), pt(w + .86, d + .86), pt(w, d + .86)], "#10393d"))
             continue
         level = (count / peak) ** 0.5
         h = 10 + 92 * level
@@ -210,6 +214,8 @@ def city(days, updated):
                             ("#7ff0dc", "#0d9488", "#0f766e") if level < .65 else
                             ("#ccfbf1", "#14b8a6", "#0d9488"))
         a, e = .08, .78
+        # buildings rise one week after another, from left to right
+        b.append(f'<g class="rise" style="animation-delay:{w * .045:.2f}s">')
         b.append(poly([pt(w + a, d + e), pt(w + e, d + e), pt(w + e, d + e, h), pt(w + a, d + e, h)], left))
         b.append(poly([pt(w + e, d + a), pt(w + e, d + e), pt(w + e, d + e, h), pt(w + e, d + a, h)], right))
         b.append(poly([pt(w + a, d + a, h), pt(w + e, d + a, h), pt(w + e, d + e, h), pt(w + a, d + e, h)], top))
@@ -217,14 +223,26 @@ def city(days, updated):
         for k, z in enumerate(range(8, int(h) - 5, 10)):
             b.append(poly([pt(w + .27, d + e, z), pt(w + .52, d + e, z), pt(w + .52, d + e, z + 4),
                            pt(w + .27, d + e, z + 4)], "#fef9c3", f'class="w{(w + d + k) % 3}"'))
+        b.append("</g>")
+        if (w, d) == newest:
+            x, y = pt(w + .43, d + .43, h + 9).split(",")
+            beacon = (f'<g class="beacon"><circle class="ring" cx="{x}" cy="{y}" r="4" fill="none" stroke="#fde68a" '
+                      f'stroke-width="1.5"/><circle cx="{x}" cy="{y}" r="2.5" fill="#fde68a"/></g>')
+    b.append(beacon)  # marks the most recent active day
     for i, (x, y) in enumerate([(300, 70), (420, 96), (520, 58), (640, 84), (730, 130), (780, 60),
                                 (230, 104), (80, 330), (200, 372), (330, 394)]):
         b.append(f'<circle class="w{i % 3}" cx="{x}" cy="{y}" r="1.4" fill="{MINT}"/>')
     total = sum(d["count"] for d in days)
     b.append(text(812, 40, f"{total:,} contributions", 14, MINT, 600, SANS, "end"))
-    b.append(text(812, 462, f"taller building = busier day · updated {updated}", 11, MUTED, 400, MONO, "end"))
+    b.append(text(812, 462, f"taller = busier · beacon = latest active day · updated {updated}", 11, MUTED, 400, MONO, "end"))
     style = ("@keyframes t{0%,100%{opacity:.95}50%{opacity:.25}}"
-             ".w0{animation:t 4s infinite}.w1{animation:t 5s 1.3s infinite}.w2{animation:t 6s 2.1s infinite}")
+             ".w0{animation:t 4s infinite}.w1{animation:t 5s 1.3s infinite}.w2{animation:t 6s 2.1s infinite}"
+             "@keyframes rise{from{transform:scaleY(0);opacity:0}to{transform:scaleY(1);opacity:1}}"
+             ".rise{transform-box:fill-box;transform-origin:50% 100%;animation:rise 1s cubic-bezier(.2,.8,.2,1) backwards}"
+             "@keyframes show{from{opacity:0}}.beacon{animation:show .6s 3.2s backwards}"
+             "@keyframes ping{0%{transform:scale(.6);opacity:1}100%{transform:scale(3);opacity:0}}"
+             ".ring{transform-box:fill-box;transform-origin:center;animation:ping 1.8s ease-out infinite}"
+             "@media (prefers-reduced-motion:reduce){*{animation:none!important}}")
     card("city", 840, 480, "".join(b),
          f"Contribution city: {total} contributions in the last 12 months", "Contribution City", style)
 
