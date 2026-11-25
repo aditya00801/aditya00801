@@ -1,83 +1,68 @@
 <div align="center">
 
-# Aditya Kushwaha
-
-**AI / ML · Cybersecurity · Data Science**
-
-BBD University, India
+<img width="100%" src="assets/hero.svg" alt="Aditya Kushwaha: AI/ML, Cybersecurity, Data Science" />
 
 <br/>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aditya-kushwaha-08112k05/)
-[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=flat-square&logo=leetcode&logoColor=black)](https://leetcode.com/u/AdityaKushwaha08/)
-[![HackerRank](https://img.shields.io/badge/HackerRank-00EA64?style=flat-square&logo=hackerrank&logoColor=black)](https://www.hackerrank.com/profile/adityakushwaha02)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/aditya00801)
-![Profile Views](https://komarev.com/ghpvc/?username=aditya00801&style=flat-square&color=grey&label=views)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0f766e?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aditya-kushwaha-08112k05/)
+[![LeetCode](https://img.shields.io/badge/LeetCode-0f766e?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/u/AdityaKushwaha08/)
+[![HackerRank](https://img.shields.io/badge/HackerRank-0f766e?style=for-the-badge&logo=hackerrank&logoColor=white)](https://www.hackerrank.com/profile/adityakushwaha02)
+[![Email](https://img.shields.io/badge/Email-0f766e?style=for-the-badge&logo=gmail&logoColor=white)](mailto:adityakushwaha0007@gmail.com)
+![Profile Views](https://komarev.com/ghpvc/?username=aditya00801&style=for-the-badge&color=0f766e&label=views)
+
+<br/><br/>
+
+<img width="100%" src="assets/about.svg" alt="About me: B.Tech CSE (AI) at Babu Banarasi Das University, Lucknow. Focus on deep learning, computer vision, MLOps, generative AI and security." />
+
+<br/><br/>
+
+<img width="100%" src="assets/stack.svg" alt="Tech stack: Python, C, C++, MySQL, TensorFlow, Keras, PyTorch, Scikit-Learn, OpenCV, NumPy, Pandas, Flask, Streamlit, Kali Linux, Wireshark, Git and more" />
+
+<br/><br/>
+
+<img width="100%" src="assets/stats.svg" alt="GitHub activity over the last 12 months" />
+
+<br/><br/>
+
+<img width="100%" src="assets/city.svg" alt="Contribution city: each building is a day of GitHub contributions" />
 
 </div>
 
----
+## 🚀 Featured Projects
 
-## About
+<p align="center">
+<a href="https://github.com/aditya00801/Cyber-Shield-Auto"><img width="49%" src="assets/project-cyber-shield.svg" alt="CyberShield-Auto: AI-powered cyber threat detection, in development" /></a>
+<a href="https://github.com/aditya00801/Brain-Tumor-Detection"><img width="49%" src="assets/project-brain-tumor.svg" alt="Brain Tumor Detection: CNN classifier for MRI scans" /></a>
+<a href="https://github.com/aditya00801/coral-reef-health-monitoring"><img width="49%" src="assets/project-coral-reef.svg" alt="Coral Reef Health Monitoring: coral bleaching detection" /></a>
+<a href="https://github.com/aditya00801/Student_Lifestyle_and_Stress_Prediction"><img width="49%" src="assets/project-student-stress.svg" alt="Student Lifestyle and Stress Prediction: Kaggle project" /></a>
+</p>
 
-Student at BBD University with a focus on Machine Learning, Cybersecurity, and Data Science. I enjoy building data-driven solutions and exploring the intersection of AI and security.
+## 🌍 Open Source
 
-- 🔭 Currently learning deep learning, ethical hacking, and MLOps
-- 🌱 Working with Python, MySQL, and various ML frameworks
-- 🤝 Open to collaborations on AI and security projects
+Merged pull request to **`wifi-observer`**: added unit tests and improved project reliability (`Python` · `Pytest` · `GitHub`).
 
----
+## 🏅 Learning
 
-## Tech Stack
+<img width="100%" src="assets/certifications.svg" alt="Certificates and courses from Oracle, MongoDB, Deloitte, JPMorgan Chase, LetsUpgrade and Kaggle" />
 
-**Languages**
-`Python` `MySQL`
+## 🏆 Competitive Programming
 
-**AI / ML**
-`TensorFlow` `Keras` `PyTorch` `Scikit-Learn` `OpenCV`
+Practising on [LeetCode](https://leetcode.com/u/AdityaKushwaha08/) and [HackerRank](https://www.hackerrank.com/profile/adityakushwaha02). Current goal: **500+ LeetCode problems**.
 
-**Data Science**
-`NumPy` `Pandas` `Matplotlib` `Seaborn` `Jupyter`
-
-**Cybersecurity**
-`Kali Linux` `Wireshark` `Nmap` `Metasploit`
-
-**Tools**
-`Git` `GitHub` `VS Code` `Google Colab` `Linux` 'Anti Gravity'
-
----
-
-## GitHub Stats
-
-<div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=aditya00801&show_icons=true&theme=default&hide_border=true&count_private=true&include_all_commits=true&rank_icon=github" width="48%" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=aditya00801&layout=compact&theme=default&hide_border=true&langs_count=6" width="38%" />
-
-<br/>
-
-<img src="https://streak-stats.demolab.com/?user=aditya00801&theme=default&hide_border=true" width="55%" />
-
-<br/>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=aditya00801&theme=minimal&hide_border=true&area=true" width="92%" />
-
-</div>
-
----
-
-## Contribution Snake
+## 🐍 Contribution Snake
 
 <div align="center">
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="https://raw.githubusercontent.com/aditya00801/aditya00801/output/github-snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/aditya00801/aditya00801/output/github-snake.svg" />
-  <img alt="contribution snake" src="https://raw.githubusercontent.com/aditya00801/aditya00801/output/github-snake.svg" width="92%" />
+  <img alt="contribution snake" src="https://raw.githubusercontent.com/aditya00801/aditya00801/output/github-snake.svg" width="100%" />
 </picture>
-</div>
 
----
+<br/><br/>
 
-<div align="center">
-<sub>© 2025 Aditya Kushwaha · BBD University, India</sub>
+🤝 <b>Open to collaborations on AI and security projects</b>
+
+<br/>
+
+<sub>© 2026 Aditya Kushwaha · BBD University, Lucknow</sub>
 </div>
