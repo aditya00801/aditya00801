@@ -286,6 +286,17 @@ def fetch():
     DATA.write_text(json.dumps({"updated": dt.date.today().isoformat(), "days": days}) + "\n")
 
 
+def export_profile():
+    """Share the text with the interactive page in docs/, so it is edited in one place."""
+    profile = {"lead": " ".join(LEAD), "about": " ".join(ABOUT),
+               "toolkit": [{"name": n, "detail": " · ".join(l)} for n, l in TOOLKIT],
+               "projects": [{"slug": s, "title": t, "status": st, "description": d, "tech": tech}
+                            for s, t, st, d, tech in PROJECTS],
+               "logbook": [{"date": d, "title": t, "issuer": i} for d, t, i in LOGBOOK]}
+    (ROOT / "data" / "profile.json").write_text(
+        json.dumps(profile, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
 def main():
     ASSETS.mkdir(exist_ok=True)
     if "--fetch" in sys.argv:
@@ -296,6 +307,7 @@ def main():
     toolkit()
     projects()
     logbook()
+    export_profile()
     stats(data["days"])
     city(data["days"], data["updated"])
 

@@ -1,0 +1,107 @@
+{
+  "lead": "I’m a final-year Computer Science & Engineering student specializing in Artificial Intelligence at Babu Banarasi Das University, Lucknow.",
+  "about": "I like taking ideas from notebooks to working software, whether that means preparing a dataset, testing a model, or making a tool someone can actually use. I’m looking for an internship or an early-career team where I can learn by building.",
+  "toolkit": [
+    {
+      "name": "Code",
+      "detail": "Python · C++ · C · SQL"
+    },
+    {
+      "name": "Machine learning",
+      "detail": "Scikit-learn · TensorFlow · CatBoost · Optuna · feature engineering"
+    },
+    {
+      "name": "Agentic AI",
+      "detail": "LLMs · AI agents · multi-agent systems · Pydantic · automation"
+    },
+    {
+      "name": "Data",
+      "detail": "Pandas · NumPy · EDA · visualization · statistical analysis"
+    },
+    {
+      "name": "Backend & security",
+      "detail": "REST APIs · FastAPI · HTTP · threat detection · security logging"
+    },
+    {
+      "name": "Development",
+      "detail": "Git · GitHub · Linux · WSL · Jupyter · Streamlit"
+    }
+  ],
+  "projects": [
+    {
+      "slug": "student-stress",
+      "title": "Student Lifestyle & Stress Prediction",
+      "status": "DEPLOYED",
+      "description": "End-to-end app predicting health conditions in three categories. CatBoost on 690,088 records with 20 engineered features: 94.985% balanced accuracy.",
+      "tech": "CatBoost · Optuna · Streamlit"
+    },
+    {
+      "slug": "cyber-shield",
+      "title": "CyberShield-Auto",
+      "status": "IN DEVELOPMENT",
+      "description": "AI-driven cybersecurity platform combining machine learning, multi-agent workflows and security event analysis to spot and rate suspicious activity.",
+      "tech": "AI Agents · FastAPI · Pydantic"
+    },
+    {
+      "slug": "brain-tumor",
+      "title": "Brain Tumor Detection",
+      "status": "DEEP LEARNING",
+      "description": "CNN that classifies brain MRI scans as glioma, meningioma, pituitary or no tumor, served with Streamlit.",
+      "tech": "TensorFlow · Keras · Streamlit"
+    },
+    {
+      "slug": "coral-reef",
+      "title": "Coral Reef Health Monitoring",
+      "status": "TEAM PROJECT",
+      "description": "Transfer-learning CNN that tells bleached from healthy coral, with a Streamlit app. 92% reported accuracy.",
+      "tech": "TensorFlow · OpenCV · Streamlit"
+    }
+  ],
+  "logbook": [
+    {
+      "date": "27 AUG 2026",
+      "title": "Oracle Agentic AI Certified Foundations Associate",
+      "issuer": "Oracle University"
+    },
+    {
+      "date": "26 AUG 2026",
+      "title": "MongoDB Overview: Core Concepts and Architecture",
+      "issuer": "MongoDB"
+    },
+    {
+      "date": "14 APR 2026",
+      "title": "Deloitte Data Analytics Job Simulation",
+      "issuer": "Forage"
+    },
+    {
+      "date": "09–11 MAR 2026",
+      "title": "SQL Bootcamp",
+      "issuer": "LetsUpgrade"
+    },
+    {
+      "date": "09–10 FEB 2026",
+      "title": "Git & GitHub Bootcamp",
+      "issuer": "LetsUpgrade"
+    },
+    {
+      "date": "28 NOV 2025",
+      "title": "JPMorgan Chase Software Engineering Job Simulation",
+      "issuer": "Forage · Kafka, H2, REST APIs"
+    },
+    {
+      "date": "17 OCT 2025",
+      "title": "Oracle Cloud Infrastructure 2025 Certified Data Science Professional",
+      "issuer": "Oracle · valid through October 2027"
+    },
+    {
+      "date": "13 SEP 2025",
+      "title": "Intro to Machine Learning",
+      "issuer": "Kaggle"
+    },
+    {
+      "date": "MAY 2025",
+      "title": "HackHazards ’25 participant",
+      "issuer": "Team Hack Heroes · The NAMESPACE Community"
+    }
+  ]
+}
