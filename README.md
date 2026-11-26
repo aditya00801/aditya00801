@@ -4,6 +4,10 @@
 
 <br/>
 
+<a href="https://aditya00801.github.io/aditya00801/"><b>▶ Open the interactive version: move your cursor over it</b></a>
+
+<br/><br/>
+
 [![Portfolio](https://img.shields.io/badge/Portfolio-2E3D28?style=for-the-badge&logo=githubpages&logoColor=E8E9DF)](https://aditya00801.github.io/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-2E3D28?style=for-the-badge&logo=linkedin&logoColor=E8E9DF)](https://www.linkedin.com/in/aditya-kushwaha-08112k05/)
 [![LeetCode](https://img.shields.io/badge/LeetCode-2E3D28?style=for-the-badge&logo=leetcode&logoColor=E8E9DF)](https://leetcode.com/u/AdityaKushwaha08/)
@@ -44,7 +48,7 @@
 
 <br/><br/>
 
-<img width="100%" src="assets/city.svg" alt="Contribution city: each building is a day of GitHub contributions" />
+<a href="https://aditya00801.github.io/aditya00801/#city"><img width="100%" src="assets/city.svg" alt="Contribution city: each building is a day of GitHub contributions" /></a>
 
 </div>
 

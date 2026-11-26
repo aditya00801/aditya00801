@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#E8E9DF">
+  <meta name="description" content="Interactive profile of Aditya Kushwaha: projects, toolkit and a contribution city.">
+  <title>Aditya Kushwaha | Interactive Profile</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="cursor" aria-hidden="true"></div>
+  <main>
+    <header class="panel hero tilt">
+      <div>
+        <p class="eyebrow">Aditya Kushwaha — Computer Science / AI</p>
+        <h1>Building useful things with <em>intelligent software.</em></h1>
+        <p>Machine learning, agentic AI, and the software that brings them into the real world.</p>
+        <p class="links">
+          <a href="https://github.com/aditya00801">GitHub</a>
+          <a href="https://aditya00801.github.io/">Portfolio</a>
+          <a href="https://www.linkedin.com/in/aditya-kushwaha-08112k05/">LinkedIn</a>
+          <a href="mailto:adityakushwaha.tech27@gmail.com">Email</a>
+        </p>
+      </div>
+      <div class="stamp" aria-hidden="true">AK.<small>AI / SWE</small></div>
+    </header>
+
+    <p id="error" class="panel" hidden>Couldn't load the profile data. Reload the page, or visit
+      <a href="https://github.com/aditya00801">GitHub</a>.</p>
+
+    <section class="panel tilt">
+      <p class="eyebrow">01 / A short introduction</p>
+      <h2>Curiosity, with something to show for it.</h2>
+      <p id="lead" class="lead"></p>
+      <p id="about"></p>
+    </section>
+
+    <section>
+      <p class="eyebrow">02 / Tools I reach for</p>
+      <h2>The toolkit</h2>
+      <div id="toolkit" class="grid"></div>
+    </section>
+
+    <section>
+      <p class="eyebrow">03 / Selected builds</p>
+      <h2>Projects</h2>
+      <div id="projects" class="grid"></div>
+    </section>
+
+    <section id="city" class="panel">
+      <p class="eyebrow">GitHub / Day by day</p>
+      <h2>Contribution city</h2>
+      <p id="readout" aria-live="polite">Move over a building, or tap it, to see that day.</p>
+      <div class="city-scroll"><svg id="skyline" viewBox="0 100 840 330" role="group" aria-label="Contribution city"></svg></div>
+    </section>
+
+    <section class="panel">
+      <p class="eyebrow">04 / Recent milestones</p>
+      <h2>The logbook</h2>
+      <ol id="logbook"></ol>
+    </section>
+  </main>
+</body>
+</html>
